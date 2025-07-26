@@ -1,9 +1,6 @@
 import Button from "@/components/common/Button";
 import { useRouter } from "next/router";
-
-interface PageRouteProps {
-  pageRoute: string;
-}
+import { PageRouteProps } from "@/interface"; // ✅ correctly used
 
 export default function Home() {
   const router = useRouter();
@@ -20,9 +17,21 @@ export default function Home() {
       </p>
 
       <div className="flex gap-6">
-        <Button action={() => routeToNextPage({ pageRoute: '/generate-text-ai' })} buttonLabel="Generate Text" buttonBackgroundColor="blue" />
-        <Button action={() => routeToNextPage({ pageRoute: '/text-to-image' })} buttonLabel="Text to Image" buttonBackgroundColor="green" />
-        <Button action={() => routeToNextPage({ pageRoute: '/counter-app' })} buttonLabel="Contact us" buttonBackgroundColor="orange" />
+        <Button
+          action={() => routeToNextPage({ pageRoute: "/generate-text-ai" })}
+          buttonLabel="Generate Text"
+          buttonBackgroundColor="blue"
+        />
+        <Button
+          action={() => routeToNextPage({ pageRoute: "/text-to-image" })}
+          buttonLabel="Text to Image"
+          buttonBackgroundColor="green"
+        />
+        <Button
+          action={() => routeToNextPage({ pageRoute: "/counter-app" })}
+          buttonLabel="Contact us"
+          buttonBackgroundColor="orange"
+        />
       </div>
     </div>
   );

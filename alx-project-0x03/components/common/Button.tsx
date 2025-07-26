@@ -1,8 +1,4 @@
-type ButtonProps = {
-  buttonLabel: string;
-  buttonBackgroundColor: string;
-  action: () => void;
-};
+import { ButtonProps } from "@/interface"; // ✅ Use the shared interface
 
 const Button = ({ buttonLabel, buttonBackgroundColor, action }: ButtonProps) => {
   return (
